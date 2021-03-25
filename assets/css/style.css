@@ -1,0 +1,39 @@
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.left {
+  float: left;
+}
+
+/* MAIN */
+/* NAV */
+nav {
+  width: 230px;
+  height: 100vh;
+  background-color: black;
+}
+
+/* SECTION */
+section {
+  width: calc(100vw - 230px);
+  height: 100vh;
+  background-color: #141922;
+}
+
+/* FOOTER */
+footer {
+  height: 90px;
+  width: 100%;
+  background-color: #282828;
+  position: fixed;
+  bottom: 0;
+  z-index: 99;
+}
