@@ -10,39 +10,76 @@ body {
   color: white;
 }
 
-.clearfix {
+a {
+  text-decoration: none;
+}
+
+main::after {
   content: "";
   display: table;
   clear: both;
-}
-
-.left {
-  float: left;
 }
 
 ul {
   list-style: none;
 }
 
+.gray {
+  color: #878787;
+}
+
+.gray:hover {
+  color: white;
+}
+
 /* MAIN */
+main {
+  height: calc(100vh - 90px);
+}
+
 /* NAV */
 nav {
+  float: left;
   width: 230px;
-  height: 100vh;
+  height: 100%;
   background-color: black;
+}
+
+nav .nav-top {
+  height: calc(100% - 80px);
+  background-color: turquoise;
+}
+
+nav .nav-top .nav-logo-mobile {
+  display: none;
 }
 
 /* SECTION */
 section {
-  width: calc(100vw - 230px);
-  height: 100vh;
+  float: left;
+  width: calc(100% - 230px);
+  height: 100%;
   background-color: #141922;
+  overflow-y: auto;
+}
+
+section .call-to-action {
+  position: fixed;
+  z-index: 99;
+  width: calc(100% - 230px);
+  height: 90px;
+  color: rgba(255, 0, 0, 0.4);
+}
+
+section .covers {
+
 }
 
 /* FOOTER */
 footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 90px;
   width: 100%;
   background-color: #282828;
@@ -55,6 +92,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  height: 100%;
   background-color: blueviolet;
 }
 
@@ -95,7 +133,7 @@ footer {
 
 .footer-top ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 200px;
 }
@@ -103,9 +141,7 @@ footer {
 /* FOOTER_BOTTOM */
 .footer-bottom {
   width: 530px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  text-align: center;
 }
 
 .progression-bar {
@@ -114,7 +150,7 @@ footer {
   background-color: #5A5A5A;
   border-radius: 10px;
   display: inline-block;
-  margin-top: 10px;
+  margin: 0 2%;
 }
 
 /* FOOTER-RIGHT */
@@ -123,4 +159,23 @@ footer {
   height: 4px;
   background-color: #5A5A5A;
   border-radius: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  nav .nav-top .nav-logo-mobile {
+    display: block;
+  }
+
+  nav .nav-top .nav-logo {
+    display: none;
+  }
+
+  nav {
+    width: 50px;
+  }
+
+  main section {
+    width: calc(100% - 50px);
+  }
 }
