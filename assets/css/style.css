@@ -56,6 +56,7 @@ nav {
   background-color: black;
 }
 
+/* NAV-TOP */
 nav .nav-top {
   height: calc(100% - 80px);
   background-color: turquoise;
@@ -70,6 +71,7 @@ nav .nav-top .nav-logo-mobile img {
   margin: 5px 10px;
 }
 
+/* NAV-SELECT */
 nav .nav-top .nav-select li {
   display: flex;
   align-items: center;
@@ -77,7 +79,11 @@ nav .nav-top .nav-select li {
   padding-left: 23px;
   font-size: 10px;
   font-weight: 700;
-  background-color: tomato;
+  transition: 0.2s;
+}
+
+nav .nav-top .nav-select li:hover {
+  background-color: #363636;
 }
 
 nav .nav-top .nav-select li img {
@@ -87,10 +93,31 @@ nav .nav-top .nav-select li img {
 
 .nav-select .active {
   color: white;
-  border-left: 3px solid #ADFF2F;
+  border-left: 3px solid #adff2f;
 }
 
 .nav-select .inactive {
+  color: #717171;
+}
+
+.nav-select .inactive img {
+  filter: brightness(0.4);
+}
+
+/* NAV-BOTTOM */
+.nav-bottom {
+  height: 80px;
+  padding: 10px 20px;
+}
+
+.nav-bottom img:first-child {
+  width: 12px;
+  filter: brightness(0.8);
+}
+
+.nav-bottom span {
+  font-size: 10px;
+  font-weight: 700;
   color: #717171;
 }
 
@@ -167,6 +194,7 @@ footer {
 
 .footer-left p {
   margin-right: 50px;
+  background-color: salmon;
 }
 
 .footer-left > * {
@@ -175,7 +203,7 @@ footer {
 
 /* FOOTER-CENTER */
 .footer-center {
-  width: 530px;
+  width: 100%;
 }
 
 /* FOOTER-TOP */
@@ -209,7 +237,7 @@ footer {
 }
 
 .progression-bar {
-  width: 80%;
+  width: 70%;
   height: 4px;
   background-color: #5a5a5a;
   border-radius: 10px;
@@ -224,10 +252,11 @@ footer {
   background-color: white;
   border-radius: 10px;
   transition: 0.1s;
+  cursor: pointer;
 }
 
 .white-bar:hover {
-  background-color: #ADFF2F;
+  background-color: #adff2f;
 }
 
 .cursor {
@@ -275,8 +304,15 @@ footer {
     width: 50px;
   }
 
-  nav .nav-top .nav-select {
-    /* Last-modification */
+  nav .nav-top .nav-select .display-none {
+    display: block;
+    width: 20px;
+    margin: 15px auto;
+  }
+
+  nav .nav-top .nav-select .active,
+  nav .nav-top .nav-select .inactive {
+    display: none;
   }
 
   /* SECTION */
