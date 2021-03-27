@@ -107,12 +107,39 @@ nav .nav-top .nav-select li img {
 /* NAV-BOTTOM */
 .nav-bottom {
   height: 80px;
+  width: 230px;
   padding: 10px 20px;
 }
 
+.nav-bottom .nav-bottom-piece {
+  height: 30px;
+  line-height: 30px;
+  width: 100%;
+}
+
+.nav-bottom .nav-bottom-piece:first-child {
+  border-bottom: 1px solid #717171;
+}
+
+.nav-bottom .nav-bottom-piece a {
+  display: flex;
+  align-items: center;
+}
+
+.nav-bottom .nav-bottom-piece a * {
+  margin: 0 5px;
+}
+
+.nav-bottom .nav-bottom-piece span:hover {
+  color: white;
+}
+
 .nav-bottom img:first-child {
-  width: 12px;
-  filter: brightness(0.8);
+  width: 18px;
+}
+
+.nav-bottom img:last-child {
+  /* LAST_MODIFICATION */
 }
 
 .nav-bottom span {
