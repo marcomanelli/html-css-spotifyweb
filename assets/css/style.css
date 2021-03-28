@@ -104,6 +104,10 @@ nav .nav-top .nav-select li img {
   filter: brightness(0.4);
 }
 
+.nav-select .inactive-img {
+  filter: brightness(0.4);
+}
+
 /* NAV-BOTTOM */
 .nav-bottom {
   height: 80px;
@@ -138,14 +142,21 @@ nav .nav-top .nav-select li img {
   width: 18px;
 }
 
-.nav-bottom img:last-child {
-  /* LAST_MODIFICATION */
+.nav-bottom img.profile-picture {
+  background-color: #878787;
+  border-radius: 100px;
+  width: 25px;
+  margin-top: 5px;
 }
 
 .nav-bottom span {
   font-size: 10px;
   font-weight: 700;
   color: #717171;
+}
+
+.nav-bottom span.profile-text {
+  color: white;
 }
 
 /* SECTION */
@@ -340,6 +351,20 @@ footer {
   nav .nav-top .nav-select .active,
   nav .nav-top .nav-select .inactive {
     display: none;
+  }
+
+  .nav-bottom {
+    width: 50px;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .nav-bottom .nav-bottom-piece {
+    display: none;
+  }
+
+  .nav-bottom .nav-bottom-piece-mobile {
+    display: block;
   }
 
   /* SECTION */
