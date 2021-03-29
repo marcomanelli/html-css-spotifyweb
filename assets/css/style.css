@@ -142,7 +142,7 @@ nav .nav-top .nav-select li span {
   margin: 25px 0;
   font-size: 12px;
   font-weight: 600;
-  transition: 0.1s;
+  transition: 0.2s;
 }
 
 .playlist .playlist-creation {
@@ -159,7 +159,6 @@ nav .nav-top .nav-select li span {
 }
 
 .playlist .playlist-plus {
-  content: '+';
   font-size: 28px;
   font-weight: 700;
   padding: 0 9px;
@@ -257,6 +256,12 @@ section .call-to-action a {
   border: 1px solid white;
   border-radius: 100px;
   margin-right: 20px;
+  transition: 0.2s;
+}
+
+section .call-to-action a:hover {
+  background-color: #a3a3a3;
+  color: #363636;
 }
 
 /* MENU-COVERS */
@@ -289,7 +294,7 @@ section .covers .menu-covers .active {
 }
 
 /* RECENTLY-PLAYED */
-.recently-played {
+.section-piece {
   display: flex;
   flex-direction: column;
   margin: 0 2%;
@@ -334,14 +339,8 @@ section .covers .menu-covers .active {
 }
 
 /* CREATED-FOR */
-.created-for {
-  display: flex;
-  flex-direction: column;
-  margin: 0 2%;
-}
-
 .created-for h2 {
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 .created-for .box-wrapper {
@@ -350,6 +349,23 @@ section .covers .menu-covers .active {
 
 .created-for .song-box {
   margin-right: 2%;
+}
+
+/* ARTISTS */
+.artists h2 {
+  margin: 10px 0;
+}
+
+.artists .box-wrapper {
+  justify-content: flex-start;
+}
+
+.artists .song-box {
+  margin-right: 2%;
+}
+
+.artists .song-box img {
+  border-radius: 50%;
 }
 
 /* FOOTER */
@@ -370,7 +386,6 @@ footer {
   justify-content: space-around;
   align-items: center;
   height: 100%;
-  background-color: blueviolet;
 }
 
 .footer-item:first-child,
@@ -396,7 +411,6 @@ footer {
 
 .footer-left p {
   margin-right: 50px;
-  background-color: salmon;
 }
 
 .footer-left > * {
