@@ -243,6 +243,7 @@ section .call-to-action {
   justify-content: flex-end;
   align-items: center;
   position: fixed;
+  z-index: 98;
   width: calc(100% - 230px);
   height: 90px;
   background-color: rgba(0, 0, 0, 0.4);
@@ -255,13 +256,12 @@ section .call-to-action a {
   color: white;
   border: 1px solid white;
   border-radius: 100px;
-  margin-right: 20px;
+  margin-right: 30px;
   transition: 0.2s;
 }
 
 section .call-to-action a:hover {
-  background-color: #a3a3a3;
-  color: #363636;
+  transform: scale(1.1);
 }
 
 /* MENU-COVERS */
@@ -324,8 +324,30 @@ section .covers .menu-covers .active {
   margin-bottom: 20px;
 }
 
-.song-box img {
+.song-box .song-cover {
   width: 100%;
+  position: relative;
+  
+}
+
+.song-box .song-cover img {
+  width: 100%;
+}
+
+.song-box .song-cover .play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+}
+
+.song-box .song-cover:hover img {
+  filter: brightness(0.6);
+}
+
+.song-box .song-cover:hover .play-button {
+  display: inline-block;
 }
 
 .song-box h5 {
